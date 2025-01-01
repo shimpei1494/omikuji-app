@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server'
 
 // Note: This is a placeholder. You'll need to implement the actual Gemini API integration
 export async function GET() {
@@ -17,14 +17,14 @@ export async function GET() {
 今日のラッキーナンバー：7
 
 アドバイス：
-直感を信じて前に進んでください。あなたの決断は、きっと良い結果をもたらすでしょう。`;
+直感を信じて前に進んでください。あなたの決断は、きっと良い結果をもたらすでしょう。`
 
-    return NextResponse.json({ fortune });
+    return NextResponse.json({ fortune })
   } catch (error) {
-    console.error('Error generating fortune:', error);
+    console.error('Error generating fortune:', error)
     return NextResponse.json(
       { error: 'Failed to generate fortune' },
-      { status: 500 }
-    );
+      { status: 500 },
+    )
   }
 }
