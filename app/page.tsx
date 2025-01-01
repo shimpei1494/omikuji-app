@@ -1,5 +1,8 @@
 'use client'
 
+import { LoadingSpinner } from '@/components/LoadingSpinner'
+import { OmikujiBox } from '@/components/OmikujiBox'
+import { OmikujiPaper } from '@/components/OmikujiPaper'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -10,9 +13,6 @@ import {
 } from '@/components/ui/card'
 import { Sparkles } from 'lucide-react'
 import { useState } from 'react'
-import { OmikujiBox } from '@/components/OmikujiBox'
-import { OmikujiPaper } from '@/components/OmikujiPaper'
-import { LoadingSpinner } from '@/components/LoadingSpinner'
 
 export default function Home() {
   const [fortune, setFortune] = useState<string>('')
@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[url('/shrine-bg.jpg')] bg-cover bg-center bg-fixed p-4">
-      <div className="max-w-md mx-auto pt-12">
+      <div className="mx-auto pt-12 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl">
         <Card className="backdrop-blur-sm bg-white/90 dark:bg-black/90">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold tracking-tight">

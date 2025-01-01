@@ -34,8 +34,9 @@ export function OmikujiPaper({ fortune, show }: OmikujiPaperProps) {
     >
       <div
         className={cn(
-          'relative mx-auto w-64 transition-all duration-1000 ease-out transform-gpu',
+          'relative mx-auto transition-all duration-1000 ease-out transform-gpu',
           'bg-[#f7f1e3] rounded shadow-lg overflow-hidden',
+          'w-64 sm:w-80 md:w-96 lg:w-[32rem]',
           unfolded ? 'h-[32rem]' : 'h-32',
           "before:absolute before:inset-0 before:bg-[url('/paper-texture.png')] before:opacity-50 before:pointer-events-none",
         )}
@@ -46,7 +47,7 @@ export function OmikujiPaper({ fortune, show }: OmikujiPaperProps) {
         </div>
 
         {/* おみくじ結果 */}
-        <div className="pt-14 px-6 text-center">
+        <div className="pt-14 px-6 text-center h-full overflow-y-auto">
           <div className="text-2xl font-bold text-red-800 mb-4">{result}</div>
           <div
             className={cn(
